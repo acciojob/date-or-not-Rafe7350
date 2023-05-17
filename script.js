@@ -1,7 +1,12 @@
 var isDate = function (input) {
   //   write your code here
 	
-  return input instanceof Date && !isNaN(input)
+  const date = new Date(input);
+  return isValidDate(date);
+}
+
+function isValidDate(date) {
+  return date instanceof Date && !isNaN(date);
 
 
 };
